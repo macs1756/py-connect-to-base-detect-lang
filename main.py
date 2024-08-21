@@ -20,9 +20,9 @@ cursor = connection.cursor()
 
 
 cursor.execute("""
-   SELECT cke.textarea, r.id 
-    FROM public.news_components rc 
-    JOIN public.news r ON rc.entity_id = r.id 
+    SELECT cke.textarea, r.id 
+    FROM public.reviews_components rc 
+    JOIN public.reviews r ON rc.entity_id = r.id 
     JOIN public.components_content_ck_editors cke ON rc.component_id = cke.id 
     WHERE r.locale = 'de' 
     AND rc.component_type = 'content.ck-editor'
